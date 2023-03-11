@@ -1,0 +1,19 @@
+grammar dsl.TemperatureSensor with org.eclipse.xtext.common.Terminals
+
+generate temperatureSensor "http://www.TemperatureSensor.dsl"
+
+Device:
+    'device' name=ID (batchSize = BatchSize & maxSensor = MaxSensor & sampleRate = SampleRate)
+;
+
+BatchSize returns Parameter:
+   ('batchsize' | 'batch' 'size') value=INT
+;
+
+MaxSensor returns Parameter:
+    (('maxsensor' | 'maxsensors') | 'max' ('sensor' | 'sensors')) value=INT
+;
+
+SampleRate returns Parameter:
+    ('samplerate' | 'sample' 'rate') value=INT
+;

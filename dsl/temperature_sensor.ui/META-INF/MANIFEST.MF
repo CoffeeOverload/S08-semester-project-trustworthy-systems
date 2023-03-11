@@ -1,0 +1,24 @@
+Manifest-Version: 1.0
+Automatic-Module-Name: temperature_sensor.ui
+Bundle-ManifestVersion: 2
+Bundle-Name: temperature_sensor.ui
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: temperature_sensor.ui; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: temperature_sensor,
+ temperature_sensor.ide,
+ org.eclipse.xtext.ui,
+ org.eclipse.xtext.ui.shared,
+ org.eclipse.xtext.ui.codetemplates.ui,
+ org.eclipse.ui.editors;bundle-version="3.14.300",
+ org.eclipse.ui.ide;bundle-version="3.18.500",
+ org.eclipse.ui,
+ org.eclipse.compare,
+ org.eclipse.xtext.builder
+Import-Package: org.apache.log4j
+Bundle-RequiredExecutionEnvironment: JavaSE-17
+Export-Package: dsl.ui.contentassist,
+ dsl.ui.quickfix,
+ temperature_sensor.ui.internal
+Bundle-Activator: temperature_sensor.ui.internal.Temperature_sensorActivator
